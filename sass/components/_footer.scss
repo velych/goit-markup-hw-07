@@ -4,12 +4,12 @@
   padding-bottom: 60px;
 }
 
-.footer-container {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
-.footer-logo-link {
+.footer-about__link {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -20,11 +20,11 @@
   margin-bottom: 20px;
   display: block;
 }
-.footer-logo-span {
+.footer-about__span {
   color: var(--text-white);
 }
 
-.footer-address {
+.footer__address {
   display: flex;
   align-items: baseline;
   justify-content: flex-start;
@@ -33,7 +33,7 @@
 .footer-item {
   margin-bottom: 9px;
 }
-.footer-link {
+.footer-item__link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -47,7 +47,7 @@
   }
 }
 
-.footer-contact {
+.footer-item__contact {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -65,7 +65,7 @@
   margin-left: 70px;
 }
 
-.footer-network-title {
+.footer-network__title {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -76,10 +76,15 @@
   color: #ffffff;
 }
 
-.footer-network-nav {
+.footer-network__nav {
   display: flex;
 }
-.footer-network-link {
+
+.footer-network__item + .footer-network__item {
+  margin-left: 10px;
+}
+
+.footer-network__link {
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -95,16 +100,13 @@
     fill: #ffffff;
   }
 }
-.footer-network-item + .footer-network-item {
-  margin-left: 10px;
-}
 
 /*--------------JOIN--------------*/
-.footer-form-about {
+.footer-form__about {
   margin-left: auto;
 }
 
-.footer-form-title {
+.footer-form__title {
   display: block;
   font-style: normal;
   font-weight: 700;
@@ -121,7 +123,7 @@
   align-items: center;
 }
 
-.footer-form-input {
+.footer-form__input {
   display: inline-block;
   width: 358px;
   height: 50px;
@@ -134,7 +136,7 @@
   border-radius: 4px;
 }
 
-.footer-form-button {
+.footer-form__button {
   display: flex;
   width: 200px;
   height: 50px;
@@ -155,6 +157,6 @@
   }
 }
 
-.footer-button-text {
+.footer-form__button-text {
   margin-right: 10px;
 }

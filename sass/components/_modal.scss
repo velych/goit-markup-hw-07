@@ -22,39 +22,31 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function);
 }
-.order-form {
+.modal__order-form {
   display: block;
   width: 448px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px 0;
 }
-.modal-title {
-  display: block;
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  color: #212121;
-}
-.form-input {
-  width: 100%;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 42px;
-  padding-right: 12px;
-  border: 1px solid;
-  border-color: rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  transition: border-color 250ms var(--timing-function);
-}
-.form-label {
+
+.modal__form-label {
   position: relative;
   display: flex;
   flex-direction: column;
+  &:focus-within > .modal__form-icon {
+    fill: var(--header-logo);
+  }
+  &:focus-within > .modal__form-input,
+  &:focus-within > .modal__form-textarea {
+    outline: transparent;
+    border-color: var(--header-logo);
+    transition: transform 250ms var(--timing-function);
+    transition: border-color 250ms var(--timing-function);
+  }
 }
-.label-text {
+
+.modal__label-text {
   width: 100%;
   padding-bottom: 4px;
   padding-top: 10px;
@@ -67,7 +59,33 @@
   color: #757575;
   transition: border-color 250ms var(--timing-function);
 }
-.form-label.agreement {
+
+.modal__form-input {
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  padding-right: 12px;
+  border: 1px solid;
+  border-color: rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms var(--timing-function);
+  &:focus-within > .modal__form-label {
+    border-color: var(--header-logo);
+  }
+}
+
+.modal__title {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: #212121;
+}
+
+.modal__form-label.agreement {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
@@ -75,12 +93,12 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
-.form-label-block {
+.modal__form-label-block {
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.form-icon-agreement {
+.modal__form-icon-agreement {
   margin-right: 7px;
   border: 2px solid #212121;
   border-radius: 2px;
@@ -88,20 +106,20 @@
   transition: border-color 250ms var(--timing-function),
     background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
-.link-agreement {
+.modal__link-agreement {
   text-decoration-line: underline;
   color: #2196f3;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.agree-modal {
+.modal__agree-modal {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-.form-textarea {
+.modal__form-textarea {
   width: 100%;
   padding: 12px 16px;
   resize: none;
@@ -114,26 +132,12 @@
   transition: border-color 250ms var(--timing-function);
 }
 
-.form-label:focus-within > .form-icon {
-  fill: var(--header-logo);
-}
-.form-input:focus-within > .form-label {
-  border-color: var(--header-logo);
-}
-.form-label:focus-within > .form-input,
-.form-label:focus-within > .form-textarea {
-  outline: transparent;
-  border-color: var(--header-logo);
-  transition: transform 250ms var(--timing-function);
-  transition: border-color 250ms var(--timing-function);
-}
-
-.form-input.agreement:checked ~ .form-icon-agreement {
+.modal__form-input.agreement:checked ~ .modal__form-icon-agreement {
   border: transparent;
   background-color: var(--header-logo);
   fill: var(--text-white);
 }
-.button-modal {
+.modal__button-modal {
   display: block;
   width: 200px;
   height: 50px;
@@ -152,13 +156,12 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 250ms var(--timing-function);
+  &:hover {
+    background: #188ce8;
+  }
 }
 
-.button-modal:hover {
-  background: #188ce8;
-}
-
-.form-icon {
+.modal__form-icon {
   position: absolute;
   bottom: 11px;
   left: 12px;
@@ -180,12 +183,12 @@
   right: 8px;
   cursor: pointer;
   transition: fill 250ms var(--timing-function);
+  &:focus,
+  &:hover {
+    fill: var(--header-logo);
+  }
 }
 
-.modal-close:hover,
-.modal-close:focus {
-  fill: var(--header-logo);
-}
 .is-hidden {
   opacity: 0;
   pointer-events: none;

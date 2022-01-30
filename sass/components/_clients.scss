@@ -1,9 +1,9 @@
-.section-clients {
+.clients {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
-.clients-title {
+.clients__title {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -13,19 +13,19 @@
   color: #212121;
   margin-bottom: 50px;
 }
-.client-list {
+.clients__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.client-item {
+.clients__item {
   list-style: none;
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-.client-link {
+.clients__link {
   width: 170px;
   height: 92px;
   display: inline-flex;

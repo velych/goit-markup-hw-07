@@ -3,7 +3,7 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.team-title {
+.team__title {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -11,11 +11,11 @@
   color: var(--header-link);
   margin-bottom: 50px;
 }
-.team-list {
+.team__list {
   display: flex;
 }
 
-.team-item {
+.team__item {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -30,7 +30,7 @@
   padding-bottom: 30px;
 }
 
-.team-subtitle {
+.team-depiction__subtitle {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -39,7 +39,8 @@
   color: #212121;
   margin-bottom: 10px;
 }
-.team-lead {
+
+.team-depiction__lead {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -47,15 +48,16 @@
   color: #757575;
   margin-bottom: 16px;
 }
-.team-coach-list {
+
+.team-depiction__list {
   display: flex;
   justify-content: center;
 }
-.team-coach-item + .team-coach-item {
+.team-depiction__item + .team-depiction__item {
   margin-left: 10px;
 }
 
-.team-coach-link {
+.team-depiction__link {
   width: 44px;
   height: 44px;
   display: flex;

@@ -1,15 +1,15 @@
 .header {
   border-bottom: 1px solid #ececec;
 }
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
 }
-.header-logo {
+.header__logo {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -19,11 +19,11 @@
   color: var(--header-logo);
   margin-right: 94px;
 }
-.header-span {
+.header__span {
   color: var(--hero-color-footer);
 }
 
-.header-link {
+.header-list__link {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -47,7 +47,7 @@
   margin-right: 30px;
 }
 
-.header-underline {
+.header-list__underline {
   position: relative;
   transition: color 250ms var(--timing-function);
   &:after {
@@ -62,7 +62,7 @@
   }
 }
 
-.header-line {
+.header-list__line {
   &:after {
     display: block;
     opacity: 1;
@@ -72,7 +72,7 @@
   }
 }
 
-.header-contact {
+.header-list__contact {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -89,7 +89,7 @@
   }
 }
 
-.header-icon {
+.header-list__icon {
   width: 16px;
   margin-right: 10px;
 }

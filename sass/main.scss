@@ -1,5 +1,11 @@
 @import './utils/variables';
+@import './base/reset';
+@import './base/common';
+@import './utils/hidden';
 
+//components
+
+@import './components/container';
 @import './components/header';
 @import './components/hero';
 @import './components/advantages';
